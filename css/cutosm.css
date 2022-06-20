@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.sans_font {
+    font-family: 'DM Sans', sans-serif;
+}
+
+:root {
+    --primary: #292930;
+    --secondery: #EC5623;
+    --blue: #171648;
+    --green: #62B3AB;
+    --header: #656464;
+}
+
+/*============= color ==============*/
+.grey_color {
+    color: var(--primary);
+}
+
+.orange_color {
+    color: var(--secondery);
+}
+
+.blue_color {
+    color: var(--blue);
+}
+
+.green_color {
+    color: var(--green);
+}
+
+.head_color {
+    color: var(--header);
+}
+
+/*============= font-weight ==============*/
+.fw_400 {
+    font-weight: 400;
+}
+
+.fw_500 {
+    font-weight: 500;
+}
+
+.fw_600 {
+    font-weight: 600;
+}
+
+.fw_700 {
+    font-weight: 700;
+}
+
+/*============= font-size ==============*/
+.fs_16 {
+    font-size: 16px;
+}
+
+.fs_18 {
+    font-size: 18px;
+}
+
+.fs_24 {
+    font-size: 24px;
+}
+
+.fs_32 {
+    font-size: 32px;
+}
+
+.fs_60 {
+    font-size: 60px;
+}
+
+.fs_96 {
+    font-size: 96px;
+}
+
+/*=============== header ===================*/
+header ul li a {
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: var(--primary);
+}
+
+header ul li a.active {
+    color: var(--primary);
+}
+button.navbar-toggler img{
+    width: 30px;
+}
+.contact_us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 72px;
+    width: 180px;
+    background-color: var(--secondery);
+    border-radius: 20px;
+}
+
+/*======================== banner =====================*/
+.banner {
+    background: url(../img/banner-bg.png);
+    background-size: 100% 95%;
+    background-repeat: no-repeat;
+    height: 805px;
+    padding-top: 120px;
+}
+
+img.left-line1 {
+    position: absolute;
+    bottom: -29px;
+}
+
+img.left-line2 {
+    position: absolute;
+    bottom: 43px;
+}
+
+img.right-line1 {
+    position: absolute;
+    right: 0;
+    bottom: 129px;
+}
+
+img.right-line2 {
+    position: absolute;
+    right: 0;
+    bottom: 149px;
+}
+
+img.right-line3 {
+    position: absolute;
+    right: 0;
+    bottom: 245px;
+}
+
+.educational_div {
+    background: rgb(119, 201, 202, 10%);
+    width: 272px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+}
+
+.content_wapper h2 {
+    line-height: 99px;
+    position: relative;
+}
+
+.content_wapper h2::before {
+    content: '';
+    background-color: #5956E9;
+    width: 72px;
+    height: 8px;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -17px;
+}
+
+.banner-img1 {
+    position: absolute;
+    right: 0;
+    bottom: 130px
+}
+
+img.img-fluid.banner-img2 {
+    position: absolute;
+    z-index: 99;
+    top: 110px;
+    right: 410px;
+}
+
+img.img-fluid.banner-img3 {
+    position: absolute;
+    z-index: 99;
+    right: 140px;
+    top: 197px;
+}
+
+img.img-fluid.banner-img4 {
+    position: absolute;
+    z-index: 99;
+    bottom: 140px;
+    right: 570px;
+}
+
+/*======================== classlet =====================*/
+.classlet-text {
+    width: 404px;
+    height: 41px;
+    background: var(--green);
+    border-radius: 40px;
+}
+
+.classlet-wapper h2 {
+    width: 68%;
+}
+
+.classlet-wapper ul li::marker {
+    font-size: 23px;
+    color: var(--green) !important;
+}
+
+.classlet-wapper ul li {
+    position: relative;
+}
+
+.classlet-wapper ul li::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: rgb(119, 201, 202, 10%);
+    ;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    left: -22px;
+    top: 13px;
+    z-index: -1;
+}
+
+img.class-let2 {
+    position: absolute;
+    top: -22px;
+    left: -60px;
+}
+
+img.class-let3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.classlet {
+    margin-top: 150px;
+}
+
+
+.main-img img{
+    position: absolute;
+    right: 0;
+}
+
+@media only screen and (max-width:991px) {
+    .banner {
+        height: 1150px;
+    }
+
+    img.img-fluid.banner-img2 {
+        top: 530px;
+    }
+
+    img.img-fluid.banner-img3 {
+        top: 612px;
+    }
+
+    .classlet-wapper h2 {
+        width: 100%;
+    }
+
+    img.class-let1.img-fluid {
+        margin-top: 50px;
+    }
+
+    img.class-let2 {
+        top: 68px;
+        left: -20px;
+    }
+
+    .banner-img1 {
+        bottom: 12px;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .left_line img {
+        display: none;
+    }
+
+    /* .right_line img{
+        display: none;
+    } */
+    .banner-img1 {
+        width: 90%;
+        position: relative;
+    }
+
+    .banner {
+        height: 1100px;
+    }
+
+    img.img-fluid.banner-img3 {
+        top: 620px;
+        right: 79px;
+    }
+
+    img.img-fluid.banner-img2 {
+        top: 547px;
+        right: 360px;
+    }
+
+    img.img-fluid.banner-img4 {
+        bottom: -40px;
+        right: 450px;
+    }
+}
+
+/* @media only screen and (max-width:650px) {
+    img.img-fluid.banner-img4 {
+        bottom: -10px;
+        right: 360px;
+    }
+
+    .banner-img1 {
+        bottom: 65px;
+    }
+
+    img.img-fluid.banner-img2 {
+        top: 537px;
+        right: 290px;
+    }
+
+    img.img-fluid.banner-img3 {
+        top: 590px;
+        right: 29px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .banner-img1 {
+        bottom: 90px;
+    }
+
+    img.img-fluid.banner-img4 {
+        bottom: 10px;
+        right: 339px;
+    }
+
+    img.img-fluid.banner-img2 {
+        top: 538px;
+        right: 263px;
+        width: 37%;
+    }
+
+    img.img-fluid.banner-img3 {
+        top: 570px;
+        right: 79px;
+        width: 35%;
+    }
+
+    img.img-fluid.banner-img4 {
+        bottom: 40px;
+        right: 299px;
+        width: 30%;
+    }
+
+    .fs_96 {
+        font-size: 80px;
+    }
+
+    .banner {
+        height: 1000px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    img.img-fluid.banner-img2 {
+        top: 538px;
+        right: 263px;
+        width: 37%;
+    }
+
+    img.img-fluid.banner-img3 {
+        top: 570px;
+        right: 79px;
+        width: 35%;
+    }
+
+    img.img-fluid.banner-img4 {
+        bottom: 40px;
+        right: 299px;
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width:475px) {
+    .content_wapper h2 {
+        line-height: 72px;
+        position: relative;
+    }
+
+    .fs_96 {
+        font-size: 56px;
+    }
+
+    .banner {
+        height: 908px;
+    }
+
+    .classlet-text {
+        width: 90%;
+
+
+    }
+}
+
+    @media only screen and (max-width:400px) {
+        img.img-fluid.banner-img2 {
+            top: 538px;
+            right: 223px;
+            width: 37%;
+
+        }
+        img.img-fluid.banner-img4 {
+            bottom: 60px;
+            right: 239px;
+            width: 30%;
+        }
+        
+    }
+    @media only screen and (max-width:375px){
+        img.img-fluid.banner-img2 {
+            top: 588px;
+            right: 163px;
+            width: 37%;
+        }
+        img.img-fluid.banner-img3 {
+            top: 630px;
+            right: 39px;
+            width: 35%;
+        }
+        img.img-fluid.banner-img4 {
+            bottom: 60px;
+            right: 199px;
+            width: 30%;
+        }
+    } */
+    @media only screen and (max-width:1200px){
+        .ps-4{
+            padding-left: .5rem!important;
+        }
+        .contact_us {
+            height: 62px;
+            width: 120px;
+        }
+    }
+    
+    @media only screen and (max-width:767px) {
+        .classlet {
+            margin-top: 30px;
+        }
+    }
+    @media only screen and (max-width:475px){
+        .content_wapper h2 {
+            line-height: 72px;
+            position: relative;
+        }
+    
+        .fs_96 {
+            font-size: 56px;
+        }
+        .classlet-text{
+            width: 90%;
+        }
+        .fs_60 {
+            font-size: 50px;
+        }
+    }
