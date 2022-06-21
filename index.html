@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -60,8 +61,8 @@
   <!--banner start here-->
   <section class="banner position-relative mb-5">
     <div class="left_line ">
-      <img class="left-line1 " data-aos="fade-up"  src="img/left-line1.png">
-      <img class="left-line2" data-aos="fade-down"  src="img/left-line2.png">
+      <img class="left-line1 " data-aos="fade-up" src="img/left-line1.png">
+      <img class="left-line2" data-aos="fade-down" src="img/left-line2.png">
     </div>
     <div class="right_line ">
       <img class="right-line1" data-aos="fade-up" src="img/right-line1.png">
@@ -112,14 +113,14 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-7 d-flex align-items-center justify-content-center mt-4 mt-sm-5 mt-lg-0 justify-content-lg-end  justify-content-xl-center ">
+        <div
+          class="col-lg-7 d-flex align-items-center justify-content-center mt-4 mt-sm-5 mt-lg-0 justify-content-lg-end  justify-content-xl-center ">
           <div class="classlet-img position-relative text-center">
             <img src="img/classle1.png" class="img-fluid mobile-img" data-aos="fade-right">
             <div class="first-video" data-aos="fade-down">
-              <iframe src="https://www.youtube.com/embed/Qz91pUoSA8w"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+              <video id="frame" controls
+                src="https://cdn.videvo.net/videvo_files/video/premium/video0446/large_watermarked/20_073983380-incredible-bioluminescence-sea_preview.mp4"
+                title="YouTube video player" allowfullscreen></video>
             </div>
             <div class="second-img" data-aos="fade-up">
               <img src="img/classlet2.png" class=" img-fluid">
@@ -135,26 +136,60 @@
   <script src="js/aos.js"></script>
   <script>
     AOS.init({
-            // Global settings:
-            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-            initClassName: 'aos-init', // class applied after initialization
-            animatedClassName: 'aos-animate', // class applied on animation
-            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-            disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-            throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+      // Global settings:
+      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+      initClassName: 'aos-init', // class applied after initialization
+      animatedClassName: 'aos-animate', // class applied on animation
+      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
 
-            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-            offset: 120, // offset (in px) from the original trigger point
-            delay: 0, // values from 0 to 3000, with step 50ms
-            duration: 2000, // values from 0 to 3000, with step 50ms
-            easing: 'ease', // default easing for AOS animations
-            once: false, // whether animation should happen only once - while scrolling down
-            mirror: true, // whether elements should animate out while scrolling past them
-            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-        });
+      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+      offset: 120, // offset (in px) from the original trigger point
+      delay: 0, // values from 0 to 3000, with step 50ms
+      duration: 2000, // values from 0 to 3000, with step 50ms
+      easing: 'ease', // default easing for AOS animations
+      once: false, // whether animation should happen only once - while scrolling down
+      mirror: true, // whether elements should animate out while scrolling past them
+      anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+    });
+
+    function playPauseVideo() {
+      let videos = document.querySelectorAll("video");
+      videos.forEach((video) => {
+        // We can only control playback without insteraction if video is mute
+        video.muted = true;
+        // Play is a promise so we need to check we have it
+        let playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.then((_) => {
+            let observer = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  if (
+                    entry.intersectionRatio !== 1 &&
+                    !video.paused
+                  ) {
+                    video.pause();
+                  } else if (video.paused) {
+                    video.play();
+                  }
+                });
+              },
+              { threshold: 0.2 }
+            );
+            observer.observe(video);
+          });
+        }
+      });
+    }
+
+    // And you would kick this off where appropriate with:
+    playPauseVideo();
+
   </script>
 </body>
 
