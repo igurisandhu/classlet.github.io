@@ -200,7 +200,9 @@ img.img-fluid.banner-img4 {
     bottom: 140px;
     right: 570px;
 }
-
+.main-banner{
+    width: 50%;
+}
 /*======================== classlet =====================*/
 .classlet-text {
     width: 404px;
@@ -208,7 +210,15 @@ img.img-fluid.banner-img4 {
     background: var(--green);
     border-radius: 40px;
 }
-
+.first-video{
+    position: absolute;
+    bottom: -60px;
+    right: 0;
+    border-radius: 13px;
+}
+.first-video iframe{
+    border-radius: 13px;
+}
 .classlet-wapper h2 {
     width: 68%;
 }
@@ -244,8 +254,8 @@ img.class-let2 {
 
 img.class-let3 {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    left: -90px;
+    top: -40px;
 }
 
 .classlet {
