@@ -383,6 +383,7 @@ img.right-line3 {
     }
     .classlet {
         margin-top: 30px;
+        margin-bottom: 60px !important;
     }
 }
 
