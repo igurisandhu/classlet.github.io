@@ -601,6 +601,7 @@ img.box-quotes {
     border-bottom: none;
     text-align: center!important;
     justify-content: center!important;
+    display: block;
 }
 .pop-img img{
     margin: 16px;
