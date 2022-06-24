@@ -621,6 +621,22 @@ img.box-quotes {
     min-height: 101px;
 }
 
+@media only screen and (min-width:1760px){
+    .work-main{
+        background-position: bottom -80px right;
+    }
+}
+@media only screen and (min-width:1950px){
+    .work-main{
+        background-position: bottom -180px right;
+    }
+}
+@media only screen and (min-width:2260px){
+    .work-main{
+        background-position: bottom -260px right;
+    }
+}
+
 @media only screen and (max-width:1400px) {
     header .ps-4 {
         padding-left: .5rem !important;
